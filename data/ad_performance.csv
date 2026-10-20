@@ -1,0 +1,91 @@
+date,channel,spend,impressions,clicks,conversions,campaign_id,campaign_name,product_category
+2026-01-01,Search,100.0,2956,120,9,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-01,Social,100.0,6914,118,3,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-01,Display,100.0,18067,167,2,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-02,Search,100.0,4228,173,11,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-02,Social,100.0,6952,157,3,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-02,Display,100.0,13628,109,3,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-03,Search,100.0,4218,197,19,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-03,Social,100.0,9315,261,13,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-03,Display,100.0,13307,105,2,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-04,Search,100.0,3136,146,15,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-04,Social,100.0,6418,105,3,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-04,Display,100.0,18942,102,2,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-05,Search,100.0,2677,166,15,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-05,Social,100.0,9985,288,7,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-05,Display,100.0,14401,127,4,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-06,Search,100.0,3981,228,23,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-06,Social,100.0,6187,154,8,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-06,Display,100.0,12653,114,4,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-07,Search,100.0,4056,196,19,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-07,Social,100.0,7494,131,4,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-07,Display,100.0,17490,85,3,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-08,Search,100.0,2792,163,11,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-08,Social,100.0,8986,168,6,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-08,Display,100.0,14211,141,4,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-09,Search,100.0,4781,223,18,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-09,Social,100.0,9147,244,7,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-09,Display,100.0,12262,106,2,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-10,Search,100.0,2771,128,15,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-10,Social,100.0,9589,247,7,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-10,Display,100.0,16089,93,3,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-11,Search,100.0,4379,194,13,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-11,Social,100.0,9051,212,6,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-11,Display,100.0,16788,101,3,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-12,Search,100.0,3982,185,22,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-12,Social,100.0,8087,181,9,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-12,Display,100.0,19054,72,2,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-13,Search,100.0,4229,245,20,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-13,Social,100.0,8440,253,10,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-13,Display,100.0,19955,137,5,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-14,Search,100.0,2969,179,17,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-14,Social,100.0,7092,188,6,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-14,Display,100.0,14404,87,2,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-15,Search,100.0,3578,247,26,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-15,Social,100.0,8079,232,13,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-15,Display,100.0,14444,128,3,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-16,Search,100.0,3314,148,16,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-16,Social,100.0,8209,241,14,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-16,Display,100.0,19524,59,1,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-17,Search,100.0,2579,112,9,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-17,Social,100.0,9406,255,8,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-17,Display,100.0,13973,128,5,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-18,Search,100.0,2850,177,19,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-18,Social,100.0,9115,210,5,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-18,Display,100.0,17404,110,3,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-19,Search,100.0,3585,200,19,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-19,Social,100.0,9950,181,8,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-19,Display,100.0,17979,141,4,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-20,Search,100.0,4134,289,29,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-20,Social,100.0,7794,222,8,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-20,Display,100.0,14030,64,1,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-21,Search,100.0,4909,278,26,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-21,Social,100.0,6029,97,4,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-21,Display,100.0,13875,48,1,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-22,Search,100.0,3853,162,12,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-22,Social,100.0,8740,195,8,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-22,Display,100.0,17925,171,5,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-23,Search,100.0,4436,210,19,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-23,Social,100.0,7667,137,3,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-23,Display,100.0,15531,85,2,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-24,Search,100.0,2721,164,20,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-24,Social,100.0,6403,102,5,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-24,Display,100.0,18558,168,3,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-25,Search,100.0,3279,184,13,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-25,Social,100.0,6751,129,4,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-25,Display,100.0,19563,69,2,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-26,Search,100.0,4754,204,20,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-26,Social,100.0,8214,226,13,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-26,Display,100.0,19588,162,3,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-27,Search,100.0,4164,227,17,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-27,Social,100.0,7642,218,6,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-27,Display,100.0,12017,119,2,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-28,Search,100.0,4363,212,22,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-28,Social,100.0,8992,269,11,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-28,Display,100.0,17885,115,2,cartside-produce,Cartside Produce Discovery,Produce
+2026-01-29,Search,100.0,3391,234,22,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-29,Social,100.0,8220,131,4,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-29,Display,100.0,12410,88,2,cartside-dairy-eggs,Cartside Dairy & Eggs Discovery,Dairy & Eggs
+2026-01-30,Search,100.0,4675,209,25,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-30,Social,100.0,6328,176,4,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
+2026-01-30,Display,100.0,12556,97,2,cartside-pantry-staples,Cartside Pantry Staples Discovery,Pantry Staples
