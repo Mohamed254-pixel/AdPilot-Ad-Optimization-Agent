@@ -180,3 +180,34 @@ they must not be blank.
 The core agent, instructions, recommendations, decision explanations, evaluation,
 and design notes are implemented. Remaining submission work includes the cloud
 scaling note, meeting summaries, and a 2–3 minute presentation with slides.
+
+## Holdout evaluation
+
+Run from the project folder:
+
+```bash
+python -m evaluation.holdout_evaluation
+```
+
+This evaluation uses January 1–21 to select an allocation, then estimates
+performance on January 22–30. The test days do not influence the budget
+decision. The daily allocation stays fixed at Search $120, Social $100,
+and Display $80 throughout the nine test days.
+
+| Metric | Equal-split baseline | Agent |
+| --- | ---: | ---: |
+| Total spend | $2,700 | $2,700 |
+| Estimated conversions | 251.00 | 280.40 |
+| Estimated CPA | $10.76 | $9.63 |
+| Estimated conversion lift | 0% | 11.71% |
+
+All four guardrails passed for the initial allocation change. The existing
+automated test suite also passed all 63 tests.
+
+The script saves daily results to `evaluation/holdout_daily_results.csv`
+and totals to `evaluation/holdout_summary.csv`.
+
+These are simulated estimates on unseen mock-data days. They assume
+conversions scale linearly with spending, without saturation or
+cross-channel effects. This evaluates a fixed allocation, not daily
+retraining, and does not establish real advertising improvement.
