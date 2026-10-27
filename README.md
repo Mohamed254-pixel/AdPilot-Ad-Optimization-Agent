@@ -3,9 +3,11 @@
 AdPilot is a group project about using advertising data to decide where to spend
 an ad budget. We’re using sample grocery campaigns for Cartside as our example.
 
-So far, the project can create sample ad data, check it for errors, and show how
-each advertising channel or grocery category performed. The agent that will
-recommend budget changes is still to be built.
+The project creates sample ad data, validates it, calculates performance, and
+recommends an explainable next-day budget. The deterministic agent uses historical
+and recent conversion performance, retains exploration funding, and checks its
+recommendations against spending guardrails. No LLM API or ad-platform connection
+is needed.
 
 ## What’s in the sample data?
 
@@ -43,6 +45,65 @@ python -m pip install -r requirements.txt
 These commands create a separate Python environment for the project and install
 the packages it needs. On Windows, use `.venv\Scripts\activate` for the second
 command.
+
+## Run the optimization agent
+
+```bash
+python main.py
+```
+
+The report shows historical and recent performance, scores, current and
+recommended budgets, reasons, an illustrative evaluation, and guardrail checks.
+Use `--input path/to/file.csv` to read another dataset. Run inside the virtual
+environment above to avoid conflicts with unrelated Python packages.
+
+For the included data, the next-day plan is **Search $120, Social $100, Display
+$80**, from an equal $100 baseline. Every allocation totals $300, reserves at
+least $30 per channel, and changes each channel by at most 20%. Search wins from
+its observed performance; channel names do not determine the recommendation.
+
+### How the agent decides
+
+1. Reuse `analysis.performance.calculate_performance()` for all validated metrics.
+2. Blend each channel's historical and latest seven-calendar-day conversions per
+   dollar and CVR with equal weights. The latest window ends at the dataset's
+   latest date, not the computer's current date.
+3. Divide each blended measure by the best channel's value. Score = **75% relative
+   conversions per dollar + 25% relative CVR**. Conversions per dollar is inverse
+   CPA, so CPA is not counted twice. CTR provides context rather than rewarding
+   clicks alone. The weights are simple prototype policy choices, not learned.
+4. Reserve $30 per channel and target the remaining $210 proportionally to score.
+   Adjust targets within the $30 floor and +/-20% current-budget bounds while
+   preserving the $300 total, including after rounding to cents.
+5. Log a reason for each channel. Re-run with new observations and the actual
+   current budgets to continue the lightweight learning loop.
+
+By default, current budgets come from the latest observed day's channel spend.
+The Python API also accepts an explicit allocation:
+
+```python
+from agents.marketing_agent import optimize_budget
+result = optimize_budget(frame, current_budgets={"Search": 120, "Social": 100, "Display": 80})
+print(result.decision_log)
+```
+
+All three channels and a valid $300 current allocation are required. Infeasible
+constraints raise a clear error rather than silently violating a guardrail. Zero
+conversions produce undefined CPA (`N/A` in the report); if all
+conversion evidence is zero, the agent retains current budgets when feasible.
+A channel missing recent observations uses its historical performance.
+
+### Illustrative evaluation
+
+`evaluation/evaluate.py` compares equal $100 allocations with the agent, using
+the **same full-history conversions-per-dollar rates** for both. For this sample,
+estimated daily conversions are **27.77 vs 30.83**, estimated CPA is **$10.80 vs
+$9.73**, and estimated conversion lift is **11.02%**.
+
+These are hypothetical estimates from training data, not measured future results
+or causal evidence. They assume a linear spending response with unchanged rates,
+no saturation, and no auction or cross-channel effects. Future observations or a
+controlled experiment would be needed to establish actual improvement.
 
 ## Run the performance summary
 
@@ -103,8 +164,9 @@ not simulate how demand differs between grocery categories.
 python -m pytest -q
 ```
 
-The tests check the 90-row dataset, daily spending, campaign labels, and metric
-calculations. They also check that invalid data is rejected, including missing
+The tests check the 90-row dataset, daily spending, campaign labels, metric
+calculations, optimization constraints, recent changes, explanations, evaluation,
+and CLI execution. They also check that invalid data is rejected, including missing
 values, negative numbers, clicks greater than ad views, and conversions greater
 than clicks. Each campaign ID must have one consistent name and category.
 
@@ -115,8 +177,6 @@ they must not be blank.
 
 ## What’s left for the group?
 
-The data and performance summaries are ready for the next part of the project.
-The group still needs to build the agent’s instructions, budget recommendations,
-decision explanations, and evaluation. The remaining submission work includes
-the design document, cloud scaling note, meeting summaries, and a 2–3 minute
-presentation with slides.
+The core agent, instructions, recommendations, decision explanations, evaluation,
+and design notes are implemented. Remaining submission work includes the cloud
+scaling note, meeting summaries, and a 2–3 minute presentation with slides.
