@@ -31,7 +31,11 @@ def _current_allocation(frame: pd.DataFrame, dates: pd.Series,
                         supplied: Mapping[str, float] | None) -> pd.Series:
     """Use actual latest-day spending unless the caller supplies current budgets."""
     if supplied is None:
-        supplied = frame.loc[dates.eq(dates.max())].groupby("channel")["spend"].sum().to_dict()
+        latest = frame.loc[dates.eq(dates.max()), ["channel", "spend"]].copy()
+        # Sum decimal currency before converting to floats so campaign totals
+        # such as $0.02 + $99.99 remain exactly $100.01 during validation.
+        latest["spend"] = latest["spend"].map(lambda value: Decimal(str(value)))
+        supplied = latest.groupby("channel")["spend"].sum().to_dict()
     if set(supplied) != set(CHANNELS):
         raise ValueError("Current budgets must include exactly Search, Social, and Display")
     amounts = pd.Series(supplied, dtype=float).reindex(CHANNELS)

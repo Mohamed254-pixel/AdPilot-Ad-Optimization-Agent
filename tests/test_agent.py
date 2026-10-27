@@ -118,6 +118,27 @@ def test_latest_day_budget_is_inferred_and_explicit_budget_can_override():
     assert overridden.channel_summary.previous_budget.eq(100).all()
 
 
+def test_latest_day_campaign_spend_is_summed_without_float_rounding_errors():
+    rows = [
+        ["2026-01-01", "Search", .02, 100, 10, 1],
+        ["2026-01-01", "Search", 99.99, 100, 10, 1],
+        ["2026-01-01", "Social", 99.99, 100, 10, 1],
+        ["2026-01-01", "Display", 100, 100, 10, 1],
+    ]
+    frame = pd.DataFrame(rows, columns=COLUMNS)
+    result = optimize_budget(frame)
+    assert result.channel_summary.previous_budget.to_dict() == {
+        "Search": 100.01, "Social": 99.99, "Display": 100,
+    }
+    assert_valid_budgets(result)
+
+    # Decimal summation must still reject genuine fractional-cent totals.
+    frame.loc[0, "spend"] = .021
+    frame.loc[2, "spend"] = 99.989
+    with pytest.raises(ValueError, match="whole cents"):
+        optimize_budget(frame)
+
+
 @pytest.mark.parametrize("current", [
     {"Search": 150, "Social": 100, "Display": 50},
     {"Search": 240, "Social": 30, "Display": 30},
